@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+        <title>Django basics - {{ title }}</title>
+    {% else %}
+        <title>Django basics</title>
+    {% endif %}
+</head>
+<body>
+    {% for post in posts %}
+        <h1>{{ post.title }}</h1>
+        <p>by {{ post.author }} on {{ post.date }}</p>
+        <p>{{ post.content }}</p>
+    {% endfor %}
+</body>
+</html>
